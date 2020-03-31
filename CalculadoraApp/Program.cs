@@ -7,7 +7,8 @@ namespace Calculadora
 
         static void Main(string[] args)
         {
-            int valor1 = 0, valor2 = 0, resultado = 0, opcion = 0;
+            int opcion = 0;
+            double valor1 = 0, valor2 = 0, resultado = 0;
             string respuesta;
 
 
@@ -32,34 +33,35 @@ namespace Calculadora
                 } while (opcion < 1 || opcion > 4);
 
 
-                Console.WriteLine("\nIntroduzca los números\n");
-                Console.Write("Valor1: ");
-                valor1 = int.Parse(Console.ReadLine());
-                Console.Write("Valor2: ");
-                valor2 = int.Parse(Console.ReadLine());
-                Console.WriteLine();
+                    Console.WriteLine("\nIntroduzca los números\n");
+                    Console.Write("Valor1: ");
+                    valor1 = double.Parse(Console.ReadLine());
+                    Console.Write("Valor2: ");
+                    valor2 = double.Parse(Console.ReadLine());
+                    Console.WriteLine();
+
 
                 switch (opcion)
                 {
                     case 1:
                         Console.WriteLine("-- SUMA --");
                         resultado = valor1 + valor2;
-                        Console.WriteLine("{0} + {1} = {2}\n", valor1, valor2, resultado);
+                        Console.WriteLine("{0} + {1} = {2}\n", valor1, valor2, Math.Round(resultado,2));
                         break;
                     case 2:
                         Console.WriteLine("-- RESTA --");
                         resultado = valor1 - valor2;
-                        Console.WriteLine("{0} - {1} = {2}\n", valor1, valor2, resultado);
+                        Console.WriteLine("{0} - {1} = {2}\n", valor1, valor2, Math.Round(resultado, 2));
                         break;
                     case 3:
                         Console.WriteLine("-- MULTIPLICACION --");
                         resultado = valor1 * valor2;
-                        Console.WriteLine("{0} * {1} = {2}\n", valor1, valor2, resultado);
+                        Console.WriteLine("{0} * {1} = {2}\n", valor1, valor2, Math.Round(resultado, 2));
                         break;
                     case 4:
                         Console.WriteLine("-- DIVISION --");
                         resultado = valor1 / valor2;
-                        Console.WriteLine("{0} / {1} = {2}\n", valor1, valor2, resultado);
+                        Console.WriteLine("{0} / {1} = {2}\n", valor1, valor2, Math.Round(resultado, 2));
                         break;
                 }
 
